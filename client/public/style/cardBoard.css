@@ -1,0 +1,61 @@
+#homeBoard, .add-btn {
+    font-family: "Roboto", sans-serif;
+    font-size: .8rem;
+    overflow: hidden;
+}
+
+.card-board {
+    width: 270px;
+    margin-right: 0.5rem;
+}
+
+.task-box {
+    border-radius: 5px;
+    background-color: #cccccc;
+    box-shadow: -1px 4px 8px #000000;
+}
+
+.card-body, .card-shadow {
+    box-shadow: -1px 2px 4px #0000006b;
+}
+
+.home-board {
+    height: calc(100vh-40px);
+}
+
+.btn-hover {
+    line-height: 0;
+    font-size: .7rem
+}
+
+.add-btn {
+    width: 270px;
+    height: 40px;
+    border-radius: 0 0 5px 5px;
+    background-color: #cccccc94;
+    text-align: left;
+}
+
+.add-btn:hover, .btn-hover:hover {
+    background: rgba(0, 0, 0, 0.199);
+}
+
+.add-task-form {
+    width: 250px;
+}
+
+.add-task-text {
+    width: 100%;
+    resize: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.add-task-text:focus {
+    outline: none
+}
+
+.btn{
+    font-size: 0.7rem
+}

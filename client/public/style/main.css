@@ -1,0 +1,90 @@
+/* Collaboration Section */
+
+.board{
+    background: linear-gradient(#3eb9de, #3a80de) center;
+    background-size: cover;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px #4a739f4a;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 18px;
+    
+}
+
+.board .header{
+    overflow: auto;
+    padding-bottom: 1rem;
+}
+
+.board .header h3{
+    width: 220px;
+    background-color: #0b568b40;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 9px 15px;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+} 
+
+.card-content{
+    font-size: .9rem
+}
+.list{
+    height: 100%;
+    background-color: #E5EFF5
+}
+.label{
+    width: 17%;
+    height: 7px;
+    border-radius: 7px;
+    margin: 5px 0;
+}
+.label-blue{
+    background-color: #00C2E0;
+}
+.label-red{
+    background-color: #EB5A46;
+}
+.label-purple{
+    background-color: #C377E0
+}
+
+.card-user{
+    height: 28px;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+}
+.user{
+    width: 28px;
+    height: 28px;
+    margin-left: 5px;
+    background-size: cover;
+    display: inline-block;
+}
+.user-1{
+    background-image: url('../images/user-1.png')
+}
+.user-2{
+    background-image: url('../images/user-2.png')
+}
+.user-3{
+    background-image: url('../images/user-3.png')
+}
+.add-card{
+    color: #aaaaaa;
+    font-size: .9rem;
+    margin: 0 0 5px 5px;
+}
+
+.section-wraper{
+    max-width: 540px;
+    margin: 0 auto;
+}
+.section-wraper h1 span{
+    font-weight: bold
+}
+.font-size-1{
+    font-size: 1.2rem
+}

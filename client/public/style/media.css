@@ -1,0 +1,20 @@
+@media only screen and (min-width: 900px){
+    html{
+        font-size: 20px;
+        color: #4d4d4d;
+        font-weight: 300;
+        line-height: 1.44rem;
+    }
+    .section-wraper{
+        font-size: 18px;
+        margin: 0 auto;
+        max-width: 900px;
+    }
+
+
+    /* NAVBAR MEMBER BOARDS COMPONENT */
+    .search-btn{
+        width: 180px;
+    }
+    
+}

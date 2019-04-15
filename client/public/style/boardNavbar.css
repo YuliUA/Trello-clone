@@ -1,0 +1,53 @@
+.navbar{
+    height: 40px;
+    z-index: 1;
+}
+.banner{
+    height: 40px;
+    background-color: #026aa7;
+}
+
+.logo-img{
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    background-image: url(/images/logo-white.png);
+    background-size: cover
+}
+
+.logo{
+    color:#ffffff;
+    font-family: 'Damion', cursive;
+    font-size: 1.5rem;
+    line-height: 0;
+    
+}
+.header-btn{
+    transition: .1s ease;
+    background: hsla(0,0%,100%,.3);
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 0.7rem;
+    margin-right: 4px;
+    min-width: 30px;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+}
+.header-btn:hover{
+    transition: .1s ease;
+    background: rgba(183, 192, 197, 0.4);
+    text-decoration: none;
+    color: #ffffff;
+}
+.search-btn{
+    width: auto;
+}
+.member-btn{
+    width: 32px;
+    height: 32px;
+    background-color: #C2CCD1;
+    border-radius: 100%;
+}

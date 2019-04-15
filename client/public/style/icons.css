@@ -1,0 +1,26 @@
+.icon-house::before,
+.icon-trello::before,
+.icon-search::before,
+.icon-plus::before,
+.icon-bell::before{
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8rem;
+    display: inline-block;
+    color: #ffffff;
+}
+.icon-house::before{
+    content: "\f015";
+}
+.icon-trello::before{
+    content: "\f24d";
+}
+
+.icon-search::before{
+    content: "\f002";
+}
+.icon-plus::before{
+    content: "\f067"
+}
+.icon-bell::before{
+    content: "\f0f3"
+}
