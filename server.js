@@ -1,8 +1,8 @@
 const express =require('express');
 const bodyParser =require('body-parser');
-const cors =require('cors');//create talking client-server
+const cors =require('cors');
 const passport = require('passport');
-const compression =require('compression');// limiting project size
+const compression =require('compression');
 
 const usersRoute = require('./router/users')
 

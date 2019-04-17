@@ -18,14 +18,14 @@ import { setCurrentUser, logoutUser } from './actions/authActions'
 
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);
-  const decoded = jwtDecode(localStorage.token);
+  const decoded = jwtDecode(localStorage.jwtToken);
   store.dispatch(setCurrentUser(decoded));
 
-  const currTime = Date.now()
+  const currTime = Date.now() / 1000;
 
   if(currTime> decoded.exp){
     store.dispatch(logoutUser());
-    window.location.href='./login'
+    window.location.href='/login'
   }
 }
 // 'yulijahiryak/boards' example of route path for UserBoard 

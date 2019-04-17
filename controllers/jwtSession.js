@@ -21,7 +21,7 @@ const createUserJwtToken=async (user, password)=>{
             }
             resolve({
                 success: true,
-                token:token
+                token:`Bearer ${token}`
             })
         })
     })

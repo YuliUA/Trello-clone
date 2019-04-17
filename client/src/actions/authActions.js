@@ -18,13 +18,16 @@ export const registerUser = (userData, history) => (dispatch) => {
 export const loginUser = (userData, history) => (dispatch) => {
     axios.post('http://localhost:5000/api/users/login', userData) //have to change path in App.js Route
       .then(res => {
+        console.log('HA', res)
         const{token} = res.data;
         setAuthToken(token);
         localStorage.setItem('jwtToken', token);//token time
         const decoded = jwtDecode(token);
+        console.log( decoded )
         dispatch(setCurrentUser(decoded))
       })
       .catch((err) => {
+        console.log( err )
         dispatch({
           type: GET_ERRORS,
           payload: err.response.data,
