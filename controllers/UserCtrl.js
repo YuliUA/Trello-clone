@@ -6,9 +6,42 @@ class UserCtrl{
         const query = `select * from demo_users where email='${email}'`;
         try {
             const result = await db(query);
+            console.log(result)
             return result;
         } catch( err ) {
             throw new Error(err.message || JSON.stringify( err ));
+        }
+    }
+
+    //TODO: get all users from table or get some user according to page params
+    static async getAllUsers(params) {
+        const query =`select * from demo_users where firstname = '${params.firstname}'`;
+        try{
+            const result = await db(query)
+            return result;
+        } catch (err){
+            throw new Error (err.message || JSON.stringify( err ))
+        }
+    }
+
+    static async deleteUser(id){
+        const query = `delete from demo_users where id=${id}`;
+        try{
+            const result = await db(query)
+            return result;
+        } catch(err){
+            throw new Error (err.message || JSON.stringify(err))
+        }
+    }
+
+    static async updateUserData(data,id){ 
+        console.log(data)
+        const query = `UPDATE demo_users SET firstname='${data.firstname}, lastname = '${data.lastname}', email = '${data.email}', password = '${data.password}' WHERE id='${id}'`;
+        try{
+            const result = await db(query)
+            return result;
+        } catch(err){
+            throw new Error(err.message || JSON.stringify(err))
         }
     }
 

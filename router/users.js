@@ -5,11 +5,11 @@ const UserCtrl = require('../controllers/UserCtrl')
 const router = express.Router()
 
 const jwtSession = require('../controllers/jwtSession')
-
+const getOptions  = require('../utils/getOptions')
 router.post('/register', async function(req,res){
     try {
         if(req.body.password2){
-          delete req.body.password2;0
+          delete req.body.password2;
         }
         const createdUser = await UserCtrl.createUser(req.body);
         return res.json(createdUser);
@@ -30,10 +30,37 @@ router.post('/login', async function(req,res){
   let foundUser = result[0];
   let jwtRes = await jwtSession(foundUser, password);
   return res.json(jwtRes)
-
-    return res.json(result[0])
   }catch(err){
     return res.status(err.status || 500).json(err);
+  }
+})
+
+router.get('/:options',async function(req,res){
+  try{
+    const data = getOptions(req.params.options)
+    let result = await UserCtrl.getAllUsers(data)
+    return res.json(result)
+
+  } catch(err){
+    return res.status(err.status || 500).json(err);
+  }
+})
+
+router.delete('/:id', async function(req,res){
+  try{
+    let result = await UserCtrl.deleteUser(req.params.id)
+    return res.json(result)
+  } catch(err){
+    return res.status(err.status||500).json(err);
+  }
+})
+ 
+router.put('/:id', async function(req,res){
+  try{
+    let result = await UserCtrl.updateUserData(req.body,req.params.id)
+    return res.json(result)
+  } catch (err){
+    return res.status(err.status||500).json(err);
   }
 })
 
