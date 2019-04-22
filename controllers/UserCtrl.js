@@ -1,8 +1,7 @@
 const db = require('../db/db');
 const bcrypt = require('bcryptjs')
-const { NotFoundError, DbError, UnauthorizedError } = require('../errors/Errors');
+const { DbError } = require('../errors/Errors');
 const UserEnum = require('../enums/user');
-const { ValidationError } = require('../errors/Errors');
 
 class UserCtrl {
     static async getUserByEmail(email) {
@@ -11,7 +10,7 @@ class UserCtrl {
             const result = await db(query);
             return result;
         } catch (err) {
-            throw new DbError({message: 'Something went wrong with data base'});
+            throw new DbError({ message: 'Something went wrong with data base' });
         }
     }
     static async getUserByUserName(firstname, lastname) {
@@ -26,7 +25,27 @@ class UserCtrl {
     }
 
     static async createUser(data) {
-       const { firstname,
+        let query1 = 'show tables';
+        const result1 = await db(query1);
+        function objectFindByKey(array, key, value) {
+            for (var i = 0; i < array.length; i++) {
+                if (array[i][key] === value) {
+                    return array[i];
+                }
+            }
+            throw new DbError({ message: 'Something went wrong with data base' });
+        }
+
+        if (objectFindByKey(result1, 'Tables_in_fW8VOkrTuV', 'demo_users')) {
+            let query2 = 'describe demo_users';
+            const result2 = await db(query2);
+            objectFindByKey(result2, 'Field', 'firstname');
+            objectFindByKey(result2, 'Field', 'lastname');
+            objectFindByKey(result2, 'Field', 'email');
+            objectFindByKey(result2, 'Field', 'password');
+        }
+
+        const { firstname,
             lastname,
             email,
             password } = data;
@@ -50,7 +69,7 @@ class UserCtrl {
             const result = await db(query);
             return result;
         } catch (err) {
-            throw new DbError({message: 'Something went wrong with data base'});
+            throw new DbError({ message: 'Something went wrong with data base' });
         }
     }
 }

@@ -12,6 +12,7 @@ class NotFoundError extends Error {
       this.name = 'Validation Error';
       this.status = 400;
       this.errors = errors;
+      this.message = errors;
     }
   }
   

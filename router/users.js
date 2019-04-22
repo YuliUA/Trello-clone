@@ -14,7 +14,7 @@ router.post('/register', async function (req, res) {
     const createdUser = await UserCtrl.createUser(req.body);
     return res.json(createdUser);
   } catch (err) {
-    return res.status(err.status || 500).json(err || err.message);
+    return res.status(err.status || 500).json(err.message || err);
   }
 })
 
