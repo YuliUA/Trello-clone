@@ -1,9 +1,11 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
+const { UnauthorizedError } = require('../errors/Errors');
 
 const createUserJwtToken=async (user, password)=>{
     if(!bcrypt.compareSync(password,user.password)){
-        throw new Error({msg:'Incorect password'})
+        console.log('Incorect password');
+        throw new UnauthorizedError({message: 'Incorrect password'});
     }
 
     const {id, firstname, lastname, email}=user;
