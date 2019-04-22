@@ -25,7 +25,7 @@ if (localStorage.jwtToken) {
 
   if(currTime> decoded.exp){
     store.dispatch(logoutUser());
-    window.location.href='/login'
+    //window.location.href='/login'
   }
 }
 // 'yulijahiryak/boards' example of route path for UserBoard 
