@@ -5,16 +5,15 @@
  */
 
 const getOptions = params => {
-    let requestArr = params.split('&')
-    let parsedArray = requestArr.map(el => el.split('='))
-    console.log(parsedArray)
-    let paramsRequest= {};
-    parsedArray.map((el,i)=>{
+    let paramsRequest = {};
+    let requestArr = params.split('&');
+    let parsedArray = requestArr.map(el => el.split('='));
+    parsedArray.map((el, i) => {
         let key = el[0];
         let value = el[1];
-        paramsRequest[i] = `${key} = '${value}'`
+        paramsRequest[i] = `${key} = '${value}'`;
     })
-    return paramsRequest
+    return paramsRequest;
 }
 
-module.exports = getOptions
+module.exports = getOptions;

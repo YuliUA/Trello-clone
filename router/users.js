@@ -1,11 +1,10 @@
 const express = require('express');
-
 // const validateRegister=require('../validation/ValidateRegister')
-const UserCtrl = require('../controllers/UserCtrl')
-const router = express.Router()
+const UserCtrl = require('../controllers/UserCtrl');
+const router = express.Router();
 
-const jwtSession = require('../controllers/jwtSession')
-const getOptions = require('../utils/getOptions')
+const jwtSession = require('../controllers/jwtSession');
+
 router.post('/register', async function (req, res) {
   try {
     if (req.body.password2) {
@@ -36,9 +35,8 @@ router.post('/login', async function (req, res) {
 
 router.get('/:options', async function (req, res) {
   try {
-    const data = getOptions(req.params.options)
-    let result = await UserCtrl.getAllUsers(data)
-    return res.json(result)
+    let result = await UserCtrl.getAllUsers(req.params.options);
+    return res.json(result);
 
   } catch (err) {
     return res.status(err.status || 500).json(err);
@@ -47,7 +45,7 @@ router.get('/:options', async function (req, res) {
 
 router.delete('/:id', async function (req, res) {
   try {
-    const { id } = req.params
+    const { id } = req.params;
     let deleted = await UserCtrl.delete(id)
     return res.json(deleted)
   } catch (err) {
@@ -64,4 +62,4 @@ router.put('/:id', async function (req, res) {
   }
 })
 
-module.exports = router
+module.exports = router;
