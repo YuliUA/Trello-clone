@@ -21,6 +21,7 @@ class NotFoundError extends Error {
       super(message);
       this.name = 'Data base Error';
       this.status = 500;
+      this.message = message;
     }
   }
   
