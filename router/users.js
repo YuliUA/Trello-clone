@@ -18,7 +18,7 @@ router.post('/register', async function(req,res){
         return res.json(createdUser);
       } catch (err) {
         console.log(err.status)
-        return res.status(err.status || 500).json(err);
+        return res.status(err.status || 500).json(err.message || err);
       }
 })
 

@@ -11,8 +11,8 @@ class UserCtrl {
             const result = await db(query);
             return result;
         } catch (err) {
-            // throw new UnexpectedError({message: `User with email ${email} already exists`});
-            throw new Error(err.message || JSON.stringify(err));
+            throw new UnexpectedError({message: `User with email ${email} already exists`});
+            //throw new Error(err.message || JSON.stringify(err));
         }
     }
 
@@ -30,20 +30,16 @@ class UserCtrl {
     }
 
     static async createUser(data) {
+        // checkIncommingParams(data, 'users_table', 'insert')
+        // Object.keys(data).forEach(k => if k not in fields => throw SmthBigError)
         const { firstname,
             lastname,
             email,
             password } = data;
         const errors = {};
-
-        
-            
         let isUserExist = await UserCtrl.getUserByEmail(email);
-
         let isUserNameExist = await UserCtrl.getUserByUserName(firstname, lastname);
-
         console.log('isUserExist', isUserExist)
-
         if (isUserExist.length > 0) {
             errors.email = UserEnum.error.emailEmpty;
             console.log(`UUUUUser with email ${email} already exists`)
