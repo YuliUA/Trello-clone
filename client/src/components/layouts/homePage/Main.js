@@ -1,20 +1,3 @@
-// import React, {Component, Fragment} from "react";
-// import {Header, Jumbotron, Collaborate} from '../index'
-
-// class Main extends Component{
-//     render(){
-//         return(
-//             <Fragment>
-//                 <Header/>
-//                 <Jumbotron/>
-//                 <Collaborate/>
-//             </Fragment>
-//         )
-//     }
-// }
-
-// export default Main;
-
 import React, {Component, Fragment} from "react";
 import {Header, Jumbotron, Collaborate} from '../index';
 import PropTypes from 'prop-types';
@@ -38,12 +21,6 @@ class Main extends Component{
         )
 
         return(
-            // <Fragment>
-            //     <Header/>
-            //     <Jumbotron/>
-            //     <Collaborate/>
-            // </Fragment>
-
             <div>
                 {isAuthenticated ? loggedInUser : guestUser}
             </div>
