@@ -25,11 +25,10 @@ if (localStorage.jwtToken) {
 
   if(currTime> decoded.exp){
     store.dispatch(logoutUser());
-    //window.location.href='/login'
   }
 }
 // 'yulijahiryak/boards' example of route path for UserBoard 
-// 'b/CXYhAVTL/filall-app' example of route to choosen user bord with {:id} & {:board_name} 
+// 'b/CXYhAVTL/finall-app' example of route to choosen user bord with {:id} & {:board_name} 
 
 class App extends Component {
   render() {
