@@ -51,3 +51,26 @@
     background-color: #C2CCD1;
     border-radius: 100%;
 }
+.dropdownArrow{
+    background: url("../images/downward_arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+}
+.loggedInButtons{
+    display: flex;
+}
+.beforeArrow{
+    margin-right: 5px;
+}
+.dropdownPosition{
+    margin-left: -170px;
+}
+.dropdown-item{
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 0;
+}
