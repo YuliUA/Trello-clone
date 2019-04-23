@@ -19,7 +19,7 @@ class NavBoard extends Component{
                 <button  className="header-btn mr-0 btn" title="Add new board"><span className="icon-plus"></span></button>
                 <Link to="/notifications" className="header-btn mr-0 ml-1"><span className="icon-bell"></span></Link>
                 <Link to="/userdata" className="member-btn ml-1">
-                    <span className="member-initials" title=""></span>
+                    <span className="member-initials" title="">YH</span>
                 </Link>
             </nav>
 

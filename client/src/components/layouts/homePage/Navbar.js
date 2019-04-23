@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../../actions/authActions';
@@ -12,7 +12,12 @@ class Navbar extends Component {
 
     render() {
         const { isAuthenticated, user } = this.props.auth;
-        
+       
+        //Add review statement for redirecting to user Dashboard Component
+        if(isAuthenticated){ 
+            return <Redirect to='/boards' />
+        } 
+
         const notLoggedInHeader = (
             <div>
                 <Link to="/login" className="btn  btn-link text-white">Увійти</Link>

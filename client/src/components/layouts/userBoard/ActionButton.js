@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+ import React, { Component } from 'react';
 import {CardMenuBtn} from '../../layouts';
 // import {CardForm} from '../../common/CardForm';
 import {connect} from 'react-redux';

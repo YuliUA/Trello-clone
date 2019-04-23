@@ -1,5 +1,4 @@
 .navbar{
-    height: 110px;
     z-index: 1;
 }
 .banner{
@@ -48,6 +47,7 @@
 .member-btn{
     width: 32px;
     height: 32px;
+    text-align: center;
     background-color: #C2CCD1;
     border-radius: 100%;
 }
@@ -73,4 +73,12 @@
     text-align: center;
     cursor: pointer;
     padding-left: 0;
+    display: inline-flex;
+}
+.member-initials{
+    color: #524f4f;
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    margin: auto
 }

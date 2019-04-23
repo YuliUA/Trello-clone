@@ -14,22 +14,25 @@ import TaskList from './userBoard/TaskList';
 import TaskListItem from './userBoard/TaskListItem';
 import AddTaskItem from './userBoard/AddTaskItem';
 import ActionButton from './userBoard/ActionButton';
-import CardMenuBtn from '../common/CardMenuBtn'
-
+import CardMenuBtn from '../common/CardMenuBtn';
+import Dashboard from '../layouts/userBoard/Dashboard';
+import BoardHeader from '../layouts/userBoard/BoardHeader';
 
 export {
-    Header, 
-    Navbar, 
-    Jumbotron, 
-    Main, 
-    Collaborate, 
-    CollaborateCard, 
-    Register, 
+    Header,
+    Navbar,
+    Jumbotron,
+    Main,
+    Collaborate,
+    CollaborateCard,
+    Register,
     Login,
     LoginSSO,
     ForgotPassword,
+    Dashboard,
     HomeBoard,
     NavBoard,
+    BoardHeader,
     TaskList,
     TaskListItem,
     AddTaskItem,

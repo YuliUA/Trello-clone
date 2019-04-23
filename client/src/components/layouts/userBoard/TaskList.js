@@ -3,7 +3,7 @@ import { TaskListItem, ActionButton, CardMenuBtn } from '../index';
 
 const TaskList = ({ title, cards }) => {
     return (
-        <div className="card-board task-box h-100 mt-sm-2" name="taskList">
+        <div className="card-board task-box h-100 mb-2" name="taskList">
             <div className="row px-3">
                 <p className="font-weight-bold m-2">{title}</p>
                 <CardMenuBtn />
