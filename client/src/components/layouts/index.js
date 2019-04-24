@@ -15,7 +15,7 @@ import TaskListItem from './userBoard/TaskListItem';
 import AddTaskItem from './userBoard/AddTaskItem';
 import ActionButton from './userBoard/ActionButton';
 import CardMenuBtn from '../common/CardMenuBtn'
-
+import MainProfile from './profilePage/MainProfile'
 
 export {
     Header, 
@@ -34,5 +34,6 @@ export {
     TaskListItem,
     AddTaskItem,
     ActionButton,
-    CardMenuBtn
+    CardMenuBtn,
+    MainProfile
 }

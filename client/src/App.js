@@ -6,7 +6,7 @@ import {
   Route, Switch 
 } from 'react-router-dom';
 import {
-  Register, Login, LoginSSO,ForgotPassword,
+  Register, Login, LoginSSO,ForgotPassword, MainProfile
   // NavBoard, HomeBoard
 } from './components/layouts/index';
 import store from './store'
@@ -42,6 +42,7 @@ class App extends Component {
               <Route exact path="/login" component={Login}/>
               <Route path="/login/sso" component={LoginSSO}/>
               <Route path="/forgot" component={ForgotPassword}/>
+              <Route path="/profile" component={MainProfile}/>
             </Switch>
             {/* <NavBoard />
             <HomeBoard /> */}

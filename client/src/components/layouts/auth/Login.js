@@ -43,7 +43,7 @@ class Login extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
     render() {
-        // const { errors } = this.state;
+         const { errors } = this.state;
         return (
             <section className="mt-5 section-wraper">
                 <div className="container">
