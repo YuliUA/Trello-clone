@@ -14,7 +14,7 @@ class Register extends Component {
             email: '',
             password: '',
             password2: '',
-            errors: {}
+            errors: { }
         }
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -53,6 +53,7 @@ class Register extends Component {
 
     render() {
         const { errors } = this.state;
+        console.log(`this.state errors ${this.state.firstname}`, errors)
         return (
             <section className="mt-5 section-wraper">
                 <div className="container">

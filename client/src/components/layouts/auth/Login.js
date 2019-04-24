@@ -62,6 +62,7 @@ class Login extends Component {
                                     type="email"
                                     value={this.state.email}
                                     onChange={this.onChange}
+                                    error={errors.email}
                                 />
                             <TextFieldGroup
                                     placeholder="••••••••••••"
@@ -70,6 +71,7 @@ class Login extends Component {
                                     type="password"
                                     value={this.state.password}
                                     onChange={this.onChange}
+                                    error={errors.password}
                                 />
                             <button id="login" type="submit" className="btn btn-success btn-lg col-12 my-3" value="Увійти">Увійти</button>
                             <button id="loginGoogle" type="submit" className="btn btn-outline-secondary btn-lg col-12" value="Увійти з Google"><i className="fab fa-google"></i> Увійти з Google</button>
