@@ -4,7 +4,7 @@ import {Navbar} from '../index';
 class Header extends Component{
     render(){
         return(
-            <header className="bg-blue">
+            <header className="bg-blue height">
                 <Navbar />
             </header>
         )

@@ -1,5 +1,22 @@
 .profile_image{
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
+    
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile_info{
+    width: 60%;
+    padding-left: 10px;
+}
+
+
+#notDisplay{
+    display: none;
 }
