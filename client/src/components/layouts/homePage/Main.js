@@ -13,10 +13,14 @@ class Main extends Component{
                 <Collaborate/>
             </Fragment>
         )
+
+        let tempStyle = {
+            marginTop: '150px'
+        }
         const loggedInUser = (
             <Fragment>
                 <Header/>
-                <p>the user is logged in</p>
+                <p style={tempStyle}>the user is logged in</p>
             </Fragment>
         )
 
