@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Main, Register, Login, LoginSSO, ForgotPassword, Dashboard } from './components/layouts/index';
+import {
+  BrowserRouter as Router,
+  Route, Switch 
+} from 'react-router-dom';
+import {
+  Register, Login, LoginSSO,ForgotPassword, MainProfile, Dashboard, Main
+  // NavBoard, HomeBoard
+} from './components/layouts/index';
+import store from './store'
 
-import store from './store';
 
 import setAuthToken from './utils/setAuthToken';
 import jwtDecode from 'jwt-decode';
@@ -30,12 +36,13 @@ class App extends Component {
         <Router>
           <div>
             <Switch>
-              <Route exact path="/" component={Main} />
-              <Route path="/register" component={Register} />
-              <Route exact path="/login" component={Login} />
-              <Route path="/login/sso" component={LoginSSO} />
-              <Route path="/forgot" component={ForgotPassword} />
+              <Route exact path="/" component={Main}/>
+              <Route path="/register" component={Register}/>
+              <Route exact path="/login" component={Login}/>
+              <Route path="/login/sso" component={LoginSSO}/>
+              <Route path="/forgot" component={ForgotPassword}/>
               <Route exact path='/boards' component={Dashboard} />
+              <Route path="/profile" component={MainProfile}/>
             </Switch>
           </div>
         </Router>

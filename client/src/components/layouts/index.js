@@ -14,9 +14,12 @@ import TaskList from './userBoard/TaskList';
 import TaskListItem from './userBoard/TaskListItem';
 import AddTaskItem from './userBoard/AddTaskItem';
 import ActionButton from './userBoard/ActionButton';
+
 import CardMenuBtn from '../common/CardMenuBtn';
 import Dashboard from '../layouts/userBoard/Dashboard';
 import BoardHeader from '../layouts/userBoard/BoardHeader';
+import MainProfile from './profilePage/MainProfile'
+
 
 export {
     Header,
@@ -37,5 +40,6 @@ export {
     TaskListItem,
     AddTaskItem,
     ActionButton,
-    CardMenuBtn
+    CardMenuBtn,
+    MainProfile
 }
