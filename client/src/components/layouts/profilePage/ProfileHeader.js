@@ -36,7 +36,4 @@ class ProfileHeader extends Component {
         )
     }
 }
-
-
-
 export default ProfileHeader;
