@@ -14,17 +14,12 @@ import TaskList from './userBoard/TaskList';
 import TaskListItem from './userBoard/TaskListItem';
 import AddTaskItem from './userBoard/AddTaskItem';
 import ActionButton from './userBoard/ActionButton';
-<<<<<<< HEAD
 
 import CardMenuBtn from '../common/CardMenuBtn';
 import Dashboard from '../layouts/userBoard/Dashboard';
 import BoardHeader from '../layouts/userBoard/BoardHeader';
 import MainProfile from './profilePage/MainProfile'
 
-=======
-import CardMenuBtn from '../common/CardMenuBtn'
-import MainProfile from './profilePage/MainProfile'
->>>>>>> ff04dc59ab6496b1131b020a95d85f779172b55a
 
 export {
     Header,
