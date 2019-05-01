@@ -3,7 +3,7 @@ import React from "react"
 const AddTaskItem = ({cards}) =>{
     
     if(cards.length===0){
-        return <button type="button" className="btn btn-link text-light add-btn">
+        return <button type="button" className="btn btn-link text-light add-btn fixed-bottom">
                     <i className="fas fa-plus pr-1"></i>
                      Додати картку
                 </button>
@@ -15,4 +15,4 @@ const AddTaskItem = ({cards}) =>{
     }
 }
 
-export default AddTaskItem
+export default AddTaskItem;

@@ -10,3 +10,7 @@ export const DELETE_LIST = 'DELETE_LIST';
 
 //action types of creating taskItem
 export const  CREATE_TASK_ITEM = 'CREATE_TASK_ITEM';
+
+//action types to move tasks and taskLists
+export const MOVE_LIST = 'MOVE_LIST';
+export const MOVE_CARD = 'MOVE_CARD';
