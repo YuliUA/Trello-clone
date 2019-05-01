@@ -15,7 +15,6 @@ import setAuthToken from './utils/setAuthToken';
 import jwtDecode from 'jwt-decode';
 import { setCurrentUser, logoutUser } from './actions/authActions';
 
-
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);
   const decoded = jwtDecode(localStorage.jwtToken);
