@@ -35,6 +35,18 @@ export const loginUser = (userData, history) => (dispatch) => {
       });
   };
 
+  export const updateUser = (userData, history) => (dispatch) => {
+    let id = userData.id;
+    axios.put(`http://localhost:5000/api/users/${id}`, userData) 
+        .then(res => {dispatch(setCurrentUser(userData))}) 
+      .catch((err) => {
+        dispatch({
+          type: GET_ERRORS,
+          payload: err.response.data,
+        });
+      });
+  };
+
   export const setCurrentUser = decoded => ({
     type: SET_CURRENT_USER,
     payload: decoded

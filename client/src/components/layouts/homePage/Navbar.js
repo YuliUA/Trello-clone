@@ -15,7 +15,7 @@ class Navbar extends Component {
        
         //Add review statement for redirecting to user Dashboard Component
         if(isAuthenticated){ 
-            return <Redirect to='/boards' />
+           // return <Redirect to='/boards' />
         } 
 
         const notLoggedInHeader = (
@@ -29,10 +29,10 @@ class Navbar extends Component {
             <div className="loggedInButtons">
                 <Link to="/" className="btn bg-primary font-weight-bold text-light beforeArrow">{user.firstname}</Link>
 
-                <div class="dropdown">
-                    <button class="btn btn-default dropdownArrow" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <div className="dropdown">
+                    <button className="btn btn-default dropdownArrow" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     </button>
-                    <ul class="dropdown-menu dropdownPosition" aria-labelledby="dropdownMenu1">
+                    <ul className="dropdown-menu dropdownPosition" aria-labelledby="dropdownMenu1">
                         <li><a className="text-primary dropdown-item" onClick={this.clickLogoutUser.bind(this)}>Вийти</a></li>
                     </ul>
                 </div>

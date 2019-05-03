@@ -1,10 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { Header } from '../index';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import ProfileCards from './ProfileCards';
 import ProfileHeader from './ProfileHeader'
-class Main extends Component {
+class MainProfile extends Component {
     render() {
         return (
             <Fragment>
@@ -16,12 +14,4 @@ class Main extends Component {
     }
 }
 
-Main.propTypes = {
-    auth: PropTypes.object.isRequired,
-};
-
-const mapStateToProps = state => ({
-    auth: state.auth,
-});
-
-export default connect(mapStateToProps)(Main);
+export default MainProfile;

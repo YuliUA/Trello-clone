@@ -29,6 +29,7 @@ class UserCtrl {
     }
 
     static async findById(id) {
+        console.log('findById', id)
         const query = `select * from demo_users where id=${id}`;
         try {
             const result = await db(query);
@@ -134,15 +135,6 @@ class UserCtrl {
             throw new Error({ msg: `User with email ${email} already exists` })
         }
 
-        const salt = bcrypt.genSaltSync(10);
-        const hashPassword = bcrypt.hashSync(password, salt);
-        const query = `insert into demo_users(firstname, lastname,email,password) values ('${firstname}', '${lastname}','${email}', '${hashPassword}')`;
-        try {
-            const result = await db(query);
-            return result;
-        } catch (err) {
-            throw new Error(err.message || JSON.stringify(err));
-        }
 
         // if(isUserNameExist.length>0){
         //      console.log(`User with firstname ${firstname} and lastname ${lastname} already exists`)

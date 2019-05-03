@@ -42,7 +42,7 @@ class App extends Component {
               <Route path="/login/sso" component={LoginSSO}/>
               <Route path="/forgot" component={ForgotPassword}/>
               <Route exact path='/boards' component={Dashboard} />
-              <Route path="/profile" component={MainProfile}/>
+              <Route path="/:id" component={MainProfile}/>
             </Switch>
           </div>
         </Router>
