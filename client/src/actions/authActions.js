@@ -38,6 +38,7 @@ export const loginUser = (userData, history) => (dispatch) => {
   export const updateUser = (userData, history) => (dispatch) => {
     let id = userData.id;
     axios.put(`http://localhost:5000/api/users/${id}`, userData) 
+    //axios.put(`http://localhost:5000/api/users/profile`, userData) 
         .then(res => {dispatch(setCurrentUser(userData))}) 
       .catch((err) => {
         dispatch({
